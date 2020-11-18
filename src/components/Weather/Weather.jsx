@@ -10,7 +10,7 @@ export default function Weather() {
         GIVEN:2,
         DENIED:3
     }
-    
+    const appKey = "e98263cec657ce84e8b1f0628b5d1197";// This needs to be moved somewhere secure
     const [main,setMain] = useState('');
     const [description,setDescription] = useState('');   
     const [icon,setIcon] = useState('');
@@ -51,9 +51,9 @@ export default function Weather() {
 
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
-          
+            
             // this can be moved in env variable
-            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=e98263cec657ce84e8b1f0628b5d1197`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${appKey}`)
             .then((res => res.json()))
             .then((data) => {
                 setConsentStatus(consent.GIVEN);
