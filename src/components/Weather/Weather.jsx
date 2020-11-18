@@ -53,7 +53,7 @@ export default function Weather() {
             const longitude = position.coords.longitude;
           
             // this can be moved in env variable
-            fetch(`https://api.openweatermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=e98263cec657ce84e8b1f0628b5d1197`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=e98263cec657ce84e8b1f0628b5d1197`)
             .then((res => res.json()))
             .then((data) => {
                 setConsentStatus(consent.GIVEN);
