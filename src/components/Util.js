@@ -3,8 +3,7 @@
      
     const colorOne =parseInt(colorOneHex, 16);
     const colorTwo =parseInt(colorTwoHex, 16);
-    let bigNumber,smallNumber;
-    console.log(bigNumber + " " + smallNumber  + " " + colorOneHex  + " " +colorTwoHex + " " +dividing + " " +sequence )
+    let bigNumber,smallNumber;    
     if(colorOne > colorTwo) {
         bigNumber = colorOne;
         smallNumber = colorTwo
@@ -38,5 +37,5 @@ export const calculateColor = (temperature, tresholds) => {
     else {        
         result = threshold3.color;
     }
-    return "#"+result;
+    return `#${result}`;
 };
